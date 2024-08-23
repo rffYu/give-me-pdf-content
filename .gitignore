@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+
+*.pdf
+
+build/*
+!build/.gitkeep
+third_party/*
+!third_party/.gitkeep
+.vscode
