@@ -192,6 +192,10 @@ int main(int argc, char* argv[])
     auto doc = get_pdf_document(ctx.get(), filename);
     std::cout << "Open document finished" << std::endl;
     auto toc = get_toc(ctx.get(), doc);
+
+    // clean up
+    fz_drop_document(ctx.get(), doc);
+
     std::cout << "Here come the content:\n"
               << std::string(48, '=') << std::endl;
     for (const auto& t : toc)
